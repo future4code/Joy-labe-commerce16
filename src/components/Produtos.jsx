@@ -3,10 +3,7 @@ import styled from "styled-components";
 
 import Produto from "./Produto";
 
-const ContainerProdutos = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-`
+
 
 class Produtos extends React.Component{
     render(){
