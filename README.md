@@ -1,6 +1,6 @@
 # Projeto LabECommerce
 
-O Astrodev deixou um testamento e essa foi a herança deixada pra vocês:
+O Astrodev deixou um testamento e essa foi a herança deixada:
 Caros alunos,
 Estou querendo montar um e-commerce de itens espaciais e vocês serão responsáveis por essa construção. Pretendo montar diferentes linhas de produtos. As possíveis linhas de produto são:
 - Satélites antigos;
