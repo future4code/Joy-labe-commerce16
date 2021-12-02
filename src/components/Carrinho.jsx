@@ -1,14 +1,19 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-class Carrinho extends React.Component{
-    render(){
+const ContainerCarrinho = styled.div `
+border: 1px solid;
+`
+
+const Carrinho = () => {
+
         return(
-            <div>
+            <ContainerCarrinho>
                 <h2>Carrinho:</h2>
-            </div>
+                <p>Valor total: {"R$"}</p>
+            </ContainerCarrinho>
         )
     }
-}
+
 
 export default Carrinho
