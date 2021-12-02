@@ -4,9 +4,9 @@ import styled from "styled-components";
 import Produto from "./Produto";
 
 const ContainerProdutos = styled.div`
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     flex-wrap: wrap;
-    width: 80vw;
 `
 
 class ContainerDeProdutos extends React.Component {

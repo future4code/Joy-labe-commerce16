@@ -7,7 +7,10 @@ import Carrinho from './components/Carrinho';
 import ContainerDeProdutos from './components/ContainerDeProdutos';
 
 const Home = styled.div`
-display: flex;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  padding: 14px;
+  grid-gap: 8px;
 `
 
 const ContainerProdutos = styled.div`
