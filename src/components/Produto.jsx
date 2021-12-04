@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const EstiloProduto = styled.div`
@@ -21,22 +21,22 @@ img {
     height: 250px;
 }
 `
-class Produto extends React.Component{
+class Produto extends React.Component {
 
-    render(){
+    render() {
         const prod = this.props.prod
         return (
             <EstiloProduto>
-                <img src={prod.img} />
+                <img src={prod.img} alt = {prod.titulo}/>
                 <p>{prod.titulo}</p>
-                <p>{"R$" + prod.valor + ",00"}</p>
+                <p>{"R$ " + prod.valor + ", 00"}</p>
                 <div>
-                    <button>Adicionar ao carrinho</button>
+                    <button onClick={()=>this.props.onClickButton(prod.id)}>Adicionar ao carrinho</button>
                 </div>
             </EstiloProduto>
-    
+
         )
-    }   
+    }
 }
 
 
