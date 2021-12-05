@@ -6,10 +6,11 @@ import Produto from "./Produto";
 const ContainerProdutos = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    flex-wrap: wrap;
 `
 const ContainerHeader = styled.div`
-
+    label{
+        margin-right: 8px;
+    }
 `
 
 class ContainerDeProdutos extends React.Component {
@@ -42,7 +43,7 @@ class ContainerDeProdutos extends React.Component {
                 <ContainerHeader>
                     <p>Quantidade de produtos: {arrayProdutos.length}</p>
                     <nav>
-                        Ordenação:
+                        <label>Ordenação:</label>                        
                         <select value={this.state.ordenar} onChange={this.onChangeOrdenar}>
                             <option value={"Crescente"}>Crescente</option>
                             <option value={"Decrescente"}>Decrescente</option>
