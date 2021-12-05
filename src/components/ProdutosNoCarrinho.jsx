@@ -7,6 +7,7 @@ const CarrinhoHeader = styled.div`
 `
 const ContainerCarrinho = styled.div`
 border: 1px solid;
+border-radius: 8px;
 padding: 8px;
 `
 

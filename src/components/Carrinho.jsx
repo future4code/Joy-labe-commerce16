@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const ContainerCarrinho = styled.div`
 border: 1px solid;
+border-radius: 8px;
 margin: 4px;
 padding: 4px;
 display: flex;
@@ -22,7 +23,7 @@ class Carrinho extends React.Component {
                 <div>
                     <p>{prod.titulo}</p>
                     <p>{"R$" + prod.valor + ",00"}</p>
-                    <button onClick={()=>this.props.onClickRemover(prod.id)}>Remover do carrinho</button>
+                    <button onClick={()=>this.props.onClickRemover(prod.tag)}>Remover do carrinho</button>
                 </div>
             </ContainerCarrinho>
         )
