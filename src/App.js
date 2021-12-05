@@ -12,37 +12,45 @@ const Home = styled.div`
   margin: 0 12px;
   grid-gap: 8px;
   width: fit-content;
+  
+`
+
+const ImagemFundo = styled.div`
+  width: 100%;
+  height: 120vh;
+  background-image: url('https://images7.alphacoders.com/805/thumbbig-805197.webp') ;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: black;
+  color: powderblue;
 `
 
 const Background = styled.div`
-    width: 100vw;
-    height: 100vh;
-    background-image: url('https://images7.alphacoders.com/805/thumbbig-805197.webp') ;
-    background-size: cover;
-    background-color: black;
-    color: powderblue;
-    z-index: -1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    button{    
-      background-color: powderblue;
-      border-radius: 8px;
-      padding: 4px;
-      cursor: pointer;
-      font-weight: bold;
-      :hover{
-        background-color: purple;
-        color: powderblue;
-      }
-      :active{
-        background-color: black;
-        color: powderblue;
-      }
+  button{    
+    background-color: powderblue;
+    border-radius: 8px;
+    padding: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    :hover{
+      background-color: purple;
+      color: powderblue;
     }
+    :active{
+      background-color: black;
+      color: powderblue;
+    }
+  }
 `
+
 
 const Title = styled.div` 
   text-align: center;
@@ -161,36 +169,38 @@ class App extends React.Component {
   render() {
     console.log(this.state.carrinho)
     return (
-      <Background>
-        <Title>
-          <h1>ASTRO STORE</h1>
-          <hr />
-          <h4>Os melhores meteoritos, pelos melhores preços.</h4>
-        </Title>
-        <Home>
-          <Filtro
-            minFilter={this.state.minFilter}
-            maxFilter={this.state.maxFilter}
-            nomeFilter={this.state.nomeFilter}
-            onChangeMinFilter={this.onChangeMinFilter}
-            onChangeMaxFilter={this.onChangeMaxFilter}
-            onChangeNomeFilter={this.onChangeNomeFilter}
-          />
-          <ContainerDeProdutos
-            produtos={produtos}
-            minFilter={this.state.minFilter}
-            maxFilter={this.state.maxFilter}
-            nomeFilter={this.state.nomeFilter}
-            onClickButton={this.onClickButtonAdicionar}
+      <ImagemFundo>
+        <Background>
+          <Title>
+            <h1>ASTRO STORE</h1>
+            <hr />
+            <h4>Os melhores meteoritos, pelos melhores preços.</h4>
+          </Title>
+          <Home>
+            <Filtro
+              minFilter={this.state.minFilter}
+              maxFilter={this.state.maxFilter}
+              nomeFilter={this.state.nomeFilter}
+              onChangeMinFilter={this.onChangeMinFilter}
+              onChangeMaxFilter={this.onChangeMaxFilter}
+              onChangeNomeFilter={this.onChangeNomeFilter}
+            />
+            <ContainerDeProdutos
+              produtos={produtos}
+              minFilter={this.state.minFilter}
+              maxFilter={this.state.maxFilter}
+              nomeFilter={this.state.nomeFilter}
+              onClickButton={this.onClickButtonAdicionar}
 
-          />
-          <ProdutosNoCarrinho
-            carrinho={this.state.carrinho}
-            soma={this.state.soma}
-            remover={this.onClickButtonRemover}
-          />
-        </Home>
-      </Background>
+            />
+            <ProdutosNoCarrinho
+              carrinho={this.state.carrinho}
+              soma={this.state.soma}
+              remover={this.onClickButtonRemover}
+            />
+          </Home>
+        </Background>
+      </ImagemFundo>
     );
   }
 }
