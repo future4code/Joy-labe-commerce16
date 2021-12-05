@@ -5,9 +5,13 @@ import Produto from "./Produto";
 
 const ContainerProdutos = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
 `
 const ContainerHeader = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
     label{
         margin-right: 8px;
     }

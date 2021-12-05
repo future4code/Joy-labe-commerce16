@@ -5,6 +5,9 @@ const ContainerFiltro = styled.div`
     border: 1px solid;
     border-radius: 8px;
     padding: 8px;
+    h3{
+        padding: 0 10px;
+    }
 `
 const ContainerInput = styled.div`
     margin: 0 10px;
