@@ -1,4 +1,4 @@
-# Projeto LabECommerce
+# 🌌 Projeto LabECommerce 🌌
 
 O Astrodev deixou um testamento e essa foi a herança deixada:
 Caros alunos,
